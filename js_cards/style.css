@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Oswald:wght@700&display=swap');
+*{
+	box-sizing: border-box
+}
+
+body {
+	font-family: 'Caveat Brush', cursive;
+	overflow: hidden;
+	margin: 0;
+	height: 100vh;
+	background: rgb(2,0,36);
+	background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(76,163,205,1) 46%, rgba(0,212,255,1) 100%);
+}
+.title {
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	font-size: 40px;
+	letter-spacing: 10px;
+
+}
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	width: 100%;
+	display: flex;
+	padding: 0 20px;
+}
+
+.slide {
+	height: 80vh;
+	border-radius: 20px;
+	margin: 10px;
+	cursor: pointer;
+	color: #fff;
+	flex: 1;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	transition: all 500ms ease-in-out;
+}
+.slide h3 {
+	position: absolute;
+	font-size: 34px;
+	bottom: 20px;
+	right: 20px;
+	margin: 0;
+	opacity: 0;
+}
+.slide.active {
+	flex: 10;
+}
+.slide.active h3{
+	opacity: 1;
+	transition: opacity 0.3s ease-in 0.5s;
+}
